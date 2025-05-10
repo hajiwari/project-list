@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Border Categories</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333333;
+            font-family: sans-serif;
+            margin: 1;
+            padding: 6;
+            width: 10;
+        }     
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            line-height: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            font-size: 18px;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* BORDERS */
+        .border1, .border2, .border3, .border4 {
+            text-align: center;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        /* BORDER 1 */
+        .border1{
+            border-left-style: dashed;  
+            border-right-style: dotted;
+            border-color: #77994d;
+            border-top-color: #77994d;
+            border-bottom-color: #556b2f;
+            background-color: #8fbc8f;
+        }
+        .border1:hover {
+            background-color: #02231c;
+            text-decoration: none;
+            border-color: #D2B48C;
+            color: #fffbf4;             
+            border-color: #9ab973;
+            border-top-color: #9ab973;
+            border-bottom-color: #556b2f;
+            }
+
+        /* BORDER 2 */
+        .border2{
+            position: relative;
+            border-left-style: dashed;  
+            border-right-style: dotted;
+            border-color: #D2B48C; 
+            border-top-color: #D2B48C;
+            border-bottom-color: #96651d;
+            background-color: #664229;
+            color: #fffbf4; 
+        }
+        .border2:hover {
+            background-color: #d8ab7e;
+            text-decoration: none;
+            color: #333333;
+            border-color: #996515;
+            border-top-color: #996515;
+            border-bottom-color: #b48c58;
+            background-color: #E5D3B3;            
+        }
+
+        /* BORDER 3 */
+        .border3 {
+            border-left-style: dashed;  
+            border-right-style: dotted;
+            border-color: #03a9f4;
+            border-top-color: #03a9f4;
+            border-bottom-color: #017cb4;
+            background-color: #add8e6;
+        }
+        .border3:hover {
+            text-decoration: none;
+            background-color: #004d70;
+            border-color: #67cefd;
+            border-top-color: #67cefd;
+            border-bottom-color: #017cb4;
+            color: #fffbf4;             
+        }
+
+        /* BORDER 4 */
+        .border4 {
+            position: relative;
+            border-left-style: dashed;  
+            border-right-style: dotted;
+            border-color: #ff8fb8;
+            border-top-color: #ff8fb8;
+            border-bottom-color: #b93f6c;
+            background-color: #de5285;
+            color: #fffbf4; 
+        }
+
+        .border4:hover {
+            background-color: #d8ab7e;
+            text-decoration: none;
+            color: #333333;
+            border-color: #ff347e;
+            border-top-color: #ff347E;
+            border-bottom-color: #e76192;
+            background-color: #fda9c8;                      
+        }
+        
+
+        /* IMAGE OVERLAYS */
+        /* OVERLAY 1 */
+        .overlay1 {
+            position: absolute;
+            opacity: 0;
+            transition: .7s ease-in-out;            
+            height: 100%;
+            width: 100%; 
+            top: 13px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px; 
+            /* height: 150px;
+            width: 150px; */
+            position: absolute; 
+            /* top: 5vh; 
+            right: 15vw; */
+            display: block;
+        }
+        .border1:hover .overlay1 {
+            opacity: 1;
+            bottom: 10px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px;   
+            position: absolute; 
+            display: block;    
+        }  
+
+        /* OVERLAY 2 */
+        .overlay2 {
+            position: absolute;
+            opacity: 0;
+            transition: .7s ease-in-out;            
+            height: 100%;
+            width: 100%; 
+            top: -2px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px; 
+        }
+        .border2:hover .overlay2 {
+            opacity: 1;
+            top: -2px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px;       
+        } 
+
+        /* OVERLAY 3 */    
+        .overlay3 {
+            position: absolute;
+            opacity: 0;
+            transition: .7s ease-in-out;            
+            height: 100%;
+            width: 100%; 
+            top: 450px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px; 
+        }    
+        .border3:hover .overlay3 {
+            opacity: 1;
+            top: 450px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px;       
+        }
+
+        /* OVERLAY 4 */
+        .overlay4 {
+            position: absolute;
+            opacity: 0;
+            transition: .7s ease-in-out;            
+            height: 100%;
+            width: 100%; 
+            top: -1px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px; 
+        }
+        .border4:hover .overlay4 {
+            opacity: 1;   
+            top: -1px;
+            bottom: 10px;
+            left: -779px;
+            right: 100px;
+        }
+ 
+    </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="border1">
+            <h2 style="">ANIMALS</h2>
+            <br>
+            <ul>
+                <li>Mouse</li>
+                <li>Jaguar</li>
+                <li>Ape</li>
+                <li>Dog</li>
+                <div class = "overlay1">
+                    <img src= "https://cdn.discordapp.com/attachments/983392861884149802/1083006074342363136/image.png" width = 300>
+                </div>
+            </ul>
+        </div>
+        <div class="border2">
+            <h2>MONTHS</h2>
+            <br>
+            <ul>
+                <li>January</li>
+                <li>March</li>
+                <li>August</li>
+                <li>December</li>
+                <div class = "overlay2">
+                    <img src= "https://cdn.discordapp.com/attachments/983392861884149802/1083006135390445719/image_2.png" width = 300>
+                </div>
+            </ul>
+        </div>
+        <div class="border3">
+            <h2>COUNTRIES</h2>
+            <br>
+            <ul>
+                <li>Denmark</li>
+                <li>Australia</li>
+                <li>Myanmar</li>
+                <li>Japan</li>
+                <div class = "overlay3">
+                    <img src= "https://cdn.discordapp.com/attachments/983392861884149802/1083006124359422022/image_1.png" width = 300>
+                </div>
+            </ul>
+        </div>
+        <div class="border4">
+            <h2>SWEETS</h2>
+            <br>
+            <ul>
+                <li>Jelly</li>
+                <li>Almonds</li>
+                <li>Marshmallow</li>
+                <li>Dragon Fruit</li>
+                <div class = "overlay4">
+                    <img src= "https://cdn.discordapp.com/attachments/983392861884149802/1083001237106085898/image.png" width = 300>
+                </div>
+                </ul>
+        </div>
+    </body>
+</html>
+
+        

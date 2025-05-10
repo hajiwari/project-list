@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JavaScript Loops</title>
+</head>
+<style>
+	body {
+		display: grid;
+		grid-template-areas:
+			"Title Title Title Title Title Title"
+			"TaskA TaskA TaskB TaskB TaskC TaskC";		
+		grid-auto-columns: 1fr;
+		background-color: #000000;
+		font-family: "Poppins", sans-serif, Arial;
+		text-align: center;
+		padding-left: 100px;
+		padding-right: 100px;
+		column-gap: 100px;
+		font-size: 17px;
+	}	
+
+	.Title {
+		margin: 1;
+		text-align: center;
+		grid-area: Title;
+		background-color: rgb(255, 255, 255);
+		padding: 10px;
+		font-size: 50px;
+	}
+
+	.Task_Title {
+		font-size: 30px;
+		margin: 0;
+	}
+
+	.TaskA,
+	.TaskB,
+	.TaskC {
+		font-family: "Poppins", Arial, sans-serif;
+		border-radius: 15px;
+		color: white;
+		padding: 30px;
+	}
+
+	.TaskA {		
+		grid-area: TaskA;
+		background-color: rgb(63, 63, 63);		
+	}
+
+	.TaskB {
+		grid-area: TaskB;
+		background-color: rgb(39, 39, 39);
+	}
+
+	.TaskC {
+		grid-area: TaskC;
+		background-color: rgb(17, 17, 17);
+	}
+
+	.TaskA:hover,
+	.TaskB:hover,
+	.TaskC:hover {
+		background-color: rgb(255, 255, 255);
+		color: #000000;
+	}
+
+	.Task_Description{		
+        margin-top: -10px;
+		margin-bottom: 20px;
+		font-size: 12px;
+
+	}
+</style>
+
+<body>
+
+	<h1 class="Title">JavaScript Loops</h1>
+	<!-- Task A: Print the numbers 0-30 -->
+	<div class="TaskA">
+		<h2 class="Task_Title">TASK - A</h2><br>
+		<p class="Task_Description"> Numbers 0-30 </p>
+		<script id="Results" class="Results">
+			for (let i = 0; i <= 30; i++) {
+				document.write(i + "<br>");
+			}
+		</script>
+	</div>
+
+	<!-- Task B: Print only the even values from 0-40 -->
+	<div class="TaskB">
+		<h2 class="Task_Title">TASK - B</h2><br>		
+		<p class="Task_Description"> Even Values from 0-40 </p>
+		<script id="Results" class="Results">
+			for (let i = 0; i <= 40; i += 2) {
+				document.write(i + "<br>");
+			}
+		</script>
+	</div>
+
+	<!-- Task C: Print multiples of 3 from 40 to 10 -->
+	<div class="TaskC">
+		<h2 class="Task_Title">TASK - C</h2><br>
+		<p class="Task_Description">Numbers 40 to 10 in Descending Order with multiples of 3</p>
+		<script id="Results" class="Results">
+			for (let i = 40; i >= 10; i--) {
+				if (i % 3 === 0) {
+					document.write(i + "<br>");
+				}
+			}
+		</script>
+	</div>
+
+</body>
+
+</html>

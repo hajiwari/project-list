@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-image: url("https://cdn.discordapp.com/attachments/921960483404267531/1090266565729058867/394521-valorant-game-agents-hero-4k-pc-wallpaper_1.png");
+      background-color: #111111;
+      height: 800px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: rgb(255, 70, 85);
+      padding: 25px;
+      font-size: 25px;
+
+    }
+
+    .navigation {
+      grid-area: navi;
+      padding: 7px;
+      background-color: rgba(3, 3, 3, 0.41);
+      font-size: 30px;
+    }
+
+    .featured_news {
+      grid-area: left;
+      padding: 0px 0;
+      font-size: 50px;
+      font-family: Impact, georgia, sans-serif;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: rgb(255, 70, 85);
+    }
+
+    .latest_update {
+      grid-area: right;
+      padding: 0px 0;
+      font-size: 50px;
+      font-family: Impact, georgia, sans-serif;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: rgb(255, 70, 85);
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: rgb(6, 7, 7);
+      color: #ffffff;
+      font-size: 20px;
+      padding: 60px;
+      grid-column: col 0 / span 1;
+      grid-row: row 5;
+    }
+
+    .navi {
+      list-style: none;
+      margin: 0;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 17px;
+      color: beige;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+      padding: 20px 20px;
+    }
+
+    a:link {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(192, 192, 192);
+    }
+
+    a:hover {
+      background-color: rgb(255, 70, 85);
+      color: white;
+      background: rgb(255, 70, 85);
+      box-shadow: 0 0 0 15px rgb(255, 70, 85);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:active {
+      color: rgb(83, 83, 83);
+    }
+
+    .header img {
+      filter: invert(1);
+    }
+
+    .featured_news:hover {
+      display: block;
+      background-color: rgb(255, 70, 85);
+      color: rgb(216, 212, 212)
+    }
+
+    .lu_content {
+      justify-content: right;
+      font-size: 20px;
+      top: -80px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    }
+
+    .lu_content_y {
+      justify-content: center;
+      padding: 10px;
+      font-size: 13px;
+      top: -90px;
+      font-family: Arial, 'Franklin Gothic Medium', 'Arial Narrow';
+      color: rgb(255, 255, 255);
+    }
+
+    .lu_button {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 15px;
+      box-shadow: 0 6px 6px rgb(255, 70, 85, 0.3);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+      background-color: rgb(255, 70, 85);
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+
+    .latest_update:hover {
+      background-color: rgb(255, 70, 85);
+      color: rgb(255, 255, 255);
+    }
+
+    .latest_update img {
+      width: auto;
+      height: 200px;
+    }
+
+    .featured_news img {
+      width: auto;
+      height: 200px;
+    }
+
+    .latest_update:hover > .lu_button {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .latest_update > .latest_update img {
+      position: absolute;
+    }
+
+    .footer {
+      background-color: rgb(54, 6, 6,);
+      color: #ffffff;
+      font-size: 15px;
+      text-align: center;
+      padding: 20px 0;
+      
+      font-family: Arial, 'Franklin Gothic Medium', 'Arial Narrow';
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header   header  header  header  header  header"
+        "navi     navi    navi    navi    navi    navi "
+        "left     left    left    right   right   right"
+        "footer   footer  footer  footer  footer  footer";
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .grid-container>div {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="header">
+      <img class="icon" src="https://cdn.discordapp.com/attachments/921960483404267531/1090255627521097728/valorant-icon2.png" width = 95px>
+      <img class="title" src="https://cdn.discordapp.com/attachments/921960483404267531/1090248610672808016/valorant-logo.png" width = 400><br>
+      <img class="news" src="https://cdn.discordapp.com/attachments/921960483404267531/1090248613831135352/valo_news.png" width = 90px><br>
+    </div>
+    <div class="navigation">
+      <nav class="navi">
+        <li><a href> Game Info </a></li>
+        <li><a href> Media </a></li>
+        <li><a href> News </a></li>
+        <li><a href> Leaderboards </a></li>
+        <li><a href> Support </a></li>
+        <li><a href> Our Socials </a></li>
+        <li><a href> More </a></li>
+      </nav>
+    </div>
+    <div class="featured_news">
+      <p>FEATURED NEWS</p>
+      <img class="lu_pic"
+        src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e39e33bf8dc7b61/641d0a01a3d5947f39834ed6/ValorantPublishing_PatchNotes_16x19.jpg?auto=webp&amp;disable=upscale&amp;width=676"
+        alt="VALORANT Patch Notes 6.06" height="100px" width="auto">
+      <br><br>
+      <p class="lu_content">
+        VALORANT Patch Notes 6.06
+      <p class="lu_content_y">
+        Short patch notes this time around.
+        Check out changes we made to Gekko, Lotus, and Agent outlines below.
+        <br><br><br> <button class="lu_button" onclick="window.location.href='https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-6-06/';">READ ARTICLE </button><br>
+      </p>
+    </div>
+    <div class="latest_update">
+      <p>LATEST UPDATES</p>
+      <img class="lu_pic"
+        src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e39e33bf8dc7b61/641d0a01a3d5947f39834ed6/ValorantPublishing_PatchNotes_16x19.jpg?auto=webp&amp;disable=upscale&amp;width=676"
+        alt="VALORANT Patch Notes 6.06" height="100px" width="auto">
+      <br><br>
+      <p class="lu_content">
+        VALORANT Patch Notes 6.06
+      <p class="lu_content_y">
+        Short patch notes this time around.
+        Check out changes we made to Gekko, Lotus, and Agent outlines below.
+        <br><br><br> <button class="lu_button" onclick="window.location.href='https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-6-06/';">READ ARTICLE </button><br>
+      </p>
+    </div>
+    <div class="footer">
+      <p>© 2023 Valorant News Page Recreation. All rights reserved.</p>
+      <p>Created by Jaime Dela Cruz III<br>
+        BSIT 602
+      </p>
+    </div>
+</body>
+
+</html>

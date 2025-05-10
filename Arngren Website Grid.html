@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Loops</title>
+</head>
+<style>
+    body {
+        display: grid;
+        grid-template-areas:
+            "User-Experience User-Experience Content Content Grid-Layout Grid-Layout";
+        grid-template-columns: 1fr 200px 1fr 200px 1fr 200px;
+        background-color: #000000;
+        font-family: "Poppins", sans-serif, Arial;
+        text-align: center;
+        font-size: 17px;
+        padding: 0;
+        column-gap: 90px;
+        margin-left: 380px;
+        margin-right: 380px;
+        margin-top: 200px;
+    }
+
+    .User-Experience,
+    .Content,
+    .Grid-Layout {
+        display: absolute;
+        font-family: "Poppins", Arial, sans-serif;
+        border-radius: 15px;
+        color: white;
+        padding: 30px;
+    }
+
+    .User-Experience {
+        grid-area: User-Experience;
+        background-color: rgb(63, 63, 63);
+    }
+
+    .Content {
+        grid-area: Content;
+        background-color: rgb(39, 39, 39);
+    }
+
+    .Grid-Layout {
+        grid-area: Grid-Layout;
+        background-color: rgb(17, 17, 17);
+    }
+
+    .Description {
+        margin-top: -10px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .Header {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        text-decoration: none;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, #412806, #412806, #412806 50%, #d7a150 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+    }
+
+
+    .Header:hover {
+        color: #000000;
+        transition: all .5s cubic-bezier(0.000, 0.000, 0.230, 1);
+        background-position: 0%;
+    }
+
+    .User-Experience:hover,
+    .Content:hover,
+    .Grid-Layout:hover {
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+
+    }
+</style>
+
+<body>
+    <div class="User-Experience">
+        <h2 class="Header">USER EXPERIENCE</h2><br><br>
+        <li class="Description">
+            The website lacks a clear purpose or message, making it hard for users to understand what the website is
+            about.
+        </li>
+        <li class="Description">
+            The website uses a cluttered design, with multiple items competing for attention on the homepage, which
+            leads to confusion and makes it challenging for the user to find what they need.
+        </li>
+        <li class="Description">
+            The website's navigation is hard to use, with too many categories and subcategories that are not organized
+            in a clear hierarchy.
+        </li>
+    </div>
+
+
+    <div class="Content"><br>
+        <h2 class="Header">CONTENT</h2><br><br><br>
+        <li class="Description">
+            The website's content is disorganized and lacks proper formatting, with varying font sizes, colors, and
+            styles that make it hard to distinguish between important and less important information.
+        </li>
+        <li class="Description">
+            The website's text is often lengthy and not broken up into smaller, digestible chunks, making it hard for
+            users to scan the content and find what they need quickly.
+        </li>
+        <li class="Description">
+            The website's images are low-quality and not optimized for web use, leading to slow load times and a poor
+            visual experience.
+        </li>
+    </div>
+
+    <div class="Grid-Layout">
+        <h2 class="Header">GRID LAYOUT</h2><br><br>
+        <li class="Description">
+            The website uses a two-column layout that is not executed effectively, with content overlapping and crowding
+            into other sections, leading to a cluttered and disorganized appearance.
+        </li>
+        <li class="Description">
+            The website's grid layout lacks consistency, with some items not aligned correctly and varying column widths
+            that create a disjointed user experience.
+        </li>
+        <li class="Description">
+            The website's use of white space is inconsistent, with some sections of the page feeling cramped, while
+            others have too much unused space, leading to an imbalanced design.
+        </li>
+    </div>
+
+</body>
+
+</html>

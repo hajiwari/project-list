@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tic Tac Toe</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat (3, 2fr);
+        grid-template-rows: repeat(3, 2fr);
+        top: 20px;
+        gap: 6px;
+        width: 450px;
+        margin: 0 auto;
+      }
+
+      .title {
+        color: white;
+        text-align: center;
+        font-size: 60px;
+      }
+
+      .square {
+        font-weight: bold;
+        font-size: 100px;
+        color: white;
+        background-color: #272727;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+      }
+
+      .square:hover {
+        background-color: #a3a3a3;
+      }
+
+      .square.x {
+        background-color: rgb(148, 148, 148);
+      }
+
+      .square.o {
+        background-color: rgb(61, 61, 61);
+      }
+
+      .square:nth-child(3n + 1) {
+        grid-column: 1;
+      }
+
+      .square:nth-child(3n + 2) {
+        grid-column: 2;
+      }
+
+      .square:nth-child(-n + 3) {
+        grid-row: 1;
+      }
+
+      .square:nth-child(n + 4):nth-child(-n + 6) {
+        grid-row: 2;
+      }
+      .square:nth-child(n + 7):nth-child(-n + 9) {
+        grid-row: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">TIC TAC TOE</h1>
+    <div class="board">
+      <div class="square" id="0"></div>
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+    </div>
+  </body>
+  <script>
+    const squares = document.querySelectorAll(".square");
+
+    let currentPlayer = "X";
+
+    squares.forEach((square) => {
+      square.addEventListener("click", () => {
+        if (!square.innerHTML) {
+          square.innerHTML = currentPlayer;
+          square.classList.add(currentPlayer.toLocaleLowerCase());
+          currentPlayer = currentPlayer === "X" ? "O" : "X";
+        }
+      });
+    });
+  </script>
+</html>
