@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Input Form</title>
+</head>
+
+<body>
+    <p class="welcome">WELCOME TO AGE VERIFIER</p>
+    <p class="message">Type and verify your age below!</p>
+    <div class="wrapper">
+        <input type="text" class="ageInput" id="ageInput" name="ageInput" required="required" />
+        <label class="ageLabel">Enter your age:</label>
+    </div>
+    <button onclick="submitForm()" class="verifyBtn">Verify</button>
+
+</body>
+
+<style>
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", sans-serif, Arial;
+        margin: 0;
+    }
+
+    .welcome {
+        top: 200vh;
+        margin-top: 200px;
+        align-content: center;
+        font-size: 70px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .message {
+        margin-top: -400px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.39);
+    }
+
+    .verifyBtn {
+        margin-top: -500px;
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+        padding: 20px 30px;
+        font-size: 16px;
+        cursor: pointer;
+
+    }
+
+    .verifyBtn:hover {
+        background-color: black;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+    }
+
+    .wrapper {
+        position: relative;
+        gap: 1px;
+        margin-top: -500px;
+
+    }
+
+    .ageInput {
+        text-align: center;
+        font-weight: bold;
+        padding: 2.25rem .05rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        border-color: rgb(255, 255, 255);
+        color: rgb(3, 3, 3);
+    }
+
+    .ageLabel {
+        position: absolute;
+        top: 2.2rem;
+        left: .80rem;
+        color: rgba(0, 0, 0, 0.315);
+        font-size: 1.5rem;
+        transition: 0.5s all;
+        padding-inline: 0.25rem;
+    }
+
+    .ageInput:focus~.ageLabel,
+    .ageInput:valid~.ageLabel {
+        top: 0.7rem;
+        left: 0.5rem;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif, Arial;
+        color: rgba(0, 0, 0, 0.836);
+    }
+</style>
+
+<script>
+    // Function to prompt user for input until it is a valid integer between 25 and 100
+    function checkEmpty(inputString) {
+        if (inputString === "") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // Function to check if the input is a valid integer
+    function checkInteger(inputString) {
+        if (isNaN(inputString)) {
+            return false;
+        } else {
+            return Number.isInteger(Number(inputString));
+        }
+    }
+
+    // Function to get an integer input from the user, with error handling.
+    function getIntegerInput() {
+        return new Promise((resolve) => {
+            let user_input = document.getElementById("ageInput").value;
+            while (true) {
+                //Function checking and displays that the user input int string from checkEmpty() method.
+                if (checkEmpty(user_input)) {
+                    alert("WARNING: \nInput cannot be empty!");
+                    return;
+                //Function checking and displays that the user input invalid string from checkInteger().
+                } else if (!checkInteger(user_input)) {
+                    alert("WARNING: \nInput must be an integer!");
+                    return;
+                //Function checking and displays that the user input outside the range.
+                } else if (parseInt(user_input) > 100) {
+                    alert("WARNING: \nAge input requirements are only accepted from 0 - 100");
+                    return;
+                //Function displays an input confirmation that the user input a number less than 100.
+                } else if (parseInt(user_input) < 100) {                    
+                    alert(`INPUT CONFIRMATION: \nYou entered: ${user_input}. \n\nYou entered a number less than 100!`);
+                    //Function that displays an age confirmation that the user input an age 25 years old and up.
+                    if (parseInt(user_input) >= 25) {
+                        alert(`AGE CONFIRMATION:\nYou entered: ${user_input}. \n\nYou're 25 years old and up!`);
+                    }
+                    return;
+                //Function that resolve error catching.    
+                } else {
+                    resolve(parseInt(user_input));
+                    break;
+                }
+            }
+        });
+    }
+
+    function submitForm() {
+        // Get an integer input from the user
+        getIntegerInput().then((user_input) => {
+            // Display confirmation messages based on the user's input
+            user_input();
+        });
+    }
+</script>
+
+</html>
